@@ -1,33 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="ka">
 <head>
-    <title>Discount Products</title>
-    <link rel="stylesheet" href="/static/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ფასდაკლებები — დღევანდელი შეთავაზებები</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Discount Products</h1>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <span class="brand-mark">%</span>
+        <span class="brand-name">ფასდაკლება</span>
+      </div>
+      <nav class="header-meta">
+        <span id="lastUpdated" class="meta-item">იტვირთება…</span>
+        <span class="meta-item meta-count"><strong id="productCount">0</strong> პროდუქტი</span>
+      </nav>
+    </div>
+  </header>
 
-<table>
-    <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Link</th>
-    </tr>
+  <section class="hero">
+    <div class="wrap hero-row">
+      <div class="hero-copy">
+        <p class="eyebrow">2nabiji.ge — ყოველდღიური მონიტორინგი</p>
+        <h1>დღეს ბაზარზე<br>ყველაზე დაბალი ფასები</h1>
+        <p class="hero-sub">ჩვენი სისტემა ავტომატურად ამოწმებს პროდუქტებს და აქ აჩვენებს მხოლოდ ფასდაკლებულებს — ხელით ძებნა აღარ გჭირდებათ.</p>
+      </div>
+      <div class="hero-tag" aria-hidden="true">
+        <div class="tag-hole"></div>
+        <div class="tag-percent">SALE</div>
+        <div class="tag-line">დღეს</div>
+      </div>
+    </div>
+  </section>
 
-    {% for product in products %}
-    <tr>
-        <td>{{ product.product_name }}</td>
-        <td>{{ product.price }}</td>
-        <td>
-            <a href="{{ product.url }}" target="_blank">
-                View Product
-            </a>
-        </td>
-    </tr>
-    {% endfor %}
+  <section class="controls">
+    <div class="wrap controls-row">
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.25" stroke="currentColor" stroke-width="1.5"/><path d="M11 11L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="text" placeholder="მოძებნე პროდუქტი, მაგ: რძე, პური, ხორცი…">
+      </div>
+      <div class="sort-box">
+        <label for="sortSelect">დალაგება</label>
+        <select id="sortSelect">
+          <option value="default">ახალი პირველი</option>
+          <option value="price-asc">ფასი: დაბლიდან მაღლა</option>
+          <option value="price-desc">ფასი: მაღლიდან დაბლა</option>
+          <option value="name-asc">სახელით (ა–ჰ)</option>
+        </select>
+      </div>
+    </div>
+  </section>
 
-</table>
+  <main class="wrap">
+    <div id="stateBanner" class="state-banner" hidden></div>
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <div id="emptyState" class="empty-state" hidden>
+      <p class="empty-title">არაფერი მოიძებნა</p>
+      <p class="empty-sub">სცადეთ სხვა საძიებო სიტყვა ან გაასუფთავეთ ფილტრი.</p>
+    </div>
+  </main>
 
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>მონაცემები მოგროვილია ავტომატურად საჯარო გვერდიდან და ემსახურება ინფორმაციულ მიზნებს. ფასები შესაძლოა შეიცვალოს მაღაზიაში.</p>
+    </div>
+  </footer>
+
+<script>
+// ---- Sample fallback data (shown until the /api/products backend is connected) ----
+const FALLBACK_PRODUCTS = [
+  { id: 1, title: "მაგთი რძე 2.5% 1ლ", price: "3.20", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 2, title: "ბოდბე ხაჭაპური იმერული 400გრ", price: "6.90", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 3, title: "სანთა ღვინო საფერავი 750მლ", price: "12.50", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 4, title: "ქათმის ფილე 1კგ", price: "14.80", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 5, title: "ბანანი 1კგ", price: "2.99", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 6, title: "ჩირაღი ზეთი ზეითუნის 500მლ", price: "9.40", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+];
+
+const gridEl = document.getElementById("grid");
+const emptyEl = document.getElementById("emptyState");
+const bannerEl = document.getElementById("stateBanner");
+const countEl = document.getElementById("productCount");
+const updatedEl = document.getElementById("lastUpdated");
+const searchInput = document.getElementById("searchInput");
+const sortSelect = document.getElementById("sortSelect");
+
+let allProducts = [];
+
+function showBanner(text, kind) {
+  bannerEl.textContent = text;
+  bannerEl.hidden = false;
+  bannerEl.className = "state-banner " + (kind || "");
+}
+function hideBanner() { bannerEl.hidden = true; }
+
+function formatPrice(p) {
+  const n = parseFloat(String(p).replace(",", "."));
+  return isNaN(n) ? p : n.toFixed(2);
+}
+
+function card(product) {
+  const price = formatPrice(product.price);
+  return `
+    <article class="card">
+      <div class="card-punch"></div>
+      <div class="card-badge">SALE</div>
+      <h3 class="card-title">${escapeHtml(product.title)}</h3>
+      <div class="tear-line"></div>
+      <div class="card-price-row">
+        <span class="card-price">${price}<span class="card-currency">₾</span></span>
+        <a class="card-link" href="${product.full_url}" target="_blank" rel="noopener">მაღაზიაში ნახვა →</a>
+      </div>
+    </article>
+  `;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str ?? "";
+  return div.innerHTML;
+}
+
+function render(products) {
+  countEl.textContent = products.length;
+  if (products.length === 0) {
+    gridEl.innerHTML = "";
+    emptyEl.hidden = false;
+    return;
+  }
+  emptyEl.hidden = true;
+  gridEl.innerHTML = products.map(card).join("");
+}
+
+function applyFiltersAndSort() {
+  const q = searchInput.value.trim().toLowerCase();
+  let list = allProducts.filter(p => p.title.toLowerCase().includes(q));
+
+  switch (sortSelect.value) {
+    case "price-asc":
+      list.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      break;
+    case "price-desc":
+      list.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      break;
+    case "name-asc":
+      list.sort((a, b) => a.title.localeCompare(b.title, "ka"));
+      break;
+    default:
+      break; // keep server / fetch order
+  }
+  render(list);
+}
+
+async function loadProducts() {
+  showBanner("პროდუქტები იტვირთება…", "loading");
+  try {
+    const res = await fetch("/api/products");
+    if (!res.ok) throw new Error("Bad response: " + res.status);
+    const data = await res.json();
+    allProducts = Array.isArray(data) ? data : [];
+    hideBanner();
+    updatedEl.textContent = "განახლდა: " + new Date().toLocaleString("ka-GE");
+  } catch (err) {
+    // Backend not reachable yet — fall back to sample data so the page still works.
+    allProducts = FALLBACK_PRODUCTS;
+    showBanner("⚠ დემო მონაცემები — API (/api/products) ჯერ არ არის დაკავშირებული", "warning");
+    updatedEl.textContent = "დემო რეჟიმი";
+  }
+  applyFiltersAndSort();
+}
+
+searchInput.addEventListener("input", applyFiltersAndSort);
+sortSelect.addEventListener("change", applyFiltersAndSort);
+
+loadProducts();
+</script>
 </body>
 </html>
