@@ -67,7 +67,7 @@ df = pd.DataFrame(items)
 #print(df.to_string ())
 
 df.to_json(
-    "D:\Data\Data Engineering\OrinabijiDiscounts\Python-Libraries_Programming\disc.json",
+    "products.json",
     orient="records",
     force_ascii=False,
     indent=4
