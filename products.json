@@ -1,4 +1,5 @@
-{
+[
+    {
         "title":"ღვინო თეთრი \"თელიანი ველი\" წინანდალი (მშრალი) 0,75ლ",
         "price":"7.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
@@ -1294,6 +1295,11 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
+        "title":"ქათმის ჩხირები \"ფაზენდა\" 300გრ",
+        "price":"2.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
         "title":"ფილე პანირებული \"ქუალიკო\" ქათმის სტრიფსი 500გრ",
         "price":"9.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
@@ -1713,3 +1719,4 @@
         "price":"2.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     }
+]
