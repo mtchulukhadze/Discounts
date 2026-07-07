@@ -4,8 +4,6 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import pandas as pd
 
-import pyodbc
-
 URL = "https://2nabiji.ge/ge/search?searchId=64c19575b3118b3676d26898"
 
 SCROLL_ROUNDS = 15
@@ -68,7 +66,12 @@ items = scrape_products(URL)
 df = pd.DataFrame(items)
 print(df.to_string ())
 
-
+df.to_json(
+    "D:\Data\Data Engineering\OrinabijiDiscounts\Python-Libraries_Programming\disc.json",
+    orient="records",
+    force_ascii=False,
+    indent=4
+)
 
 import pandas as pd
 import pyodbc
