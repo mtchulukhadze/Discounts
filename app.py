@@ -64,7 +64,7 @@ def scrape_products(url: str) -> list:
 
 items = scrape_products(URL)
 df = pd.DataFrame(items)
-print(df.to_string ())
+#print(df.to_string ())
 
 df.to_json(
     "D:\Data\Data Engineering\OrinabijiDiscounts\Python-Libraries_Programming\disc.json",
@@ -73,92 +73,4 @@ df.to_json(
     indent=4
 )
 
-import pandas as pd
-import pyodbc
 
-def main():
-
-    user = 'DESKTOP-3QJN7S3' + "\)" + "user"  # sql server user name
-    user_rep = user.replace(")", "")
-
-    conn = pyodbc.connect("Driver={SQL Server};"
-                              "Server=DESKTOP-3QJN7S3;"  # Server name
-                              f"uid={user_rep}"
-                              "Database=Data_Model;"  # selected database
-                              "Trusted_Connection=yes;")
-
-    cursor = conn.cursor()
-
-
-    data = pd.read_sql_query('''select 8 from Data_Model.dbo.orinabiji''', conn)
-
-
-    if data is None:
-        pass
-    else:
-        try:
-            cursor.execute('''create table Data_Model.dbo.orinabiji (product_name nvarchar(max), price float, url nvarchar(max))''')
-            conn.commit()
-        except Exception as e:
-            conn.rollback()
-            print(f"{e}")
-
-
-
-    for index, row in df.iterrows():
-        try:
-            cursor.execute('''
-                INSERT INTO Data_Model.dbo.orinabiji (product_name, price, url)
-                VALUES (?, ?, ?)
-            ''', row['title'], row['price'], row['full_url'])
-            conn.commit()
-        except Exception as e:
-            conn.rollback()
-            print(f"Error inserting row {index + 1}: {e}")
-
-    # Close the cursor and connection
-    cursor.close()
-    conn.close()
-
-
-if __name__ == "__main__":
-    main()
-
-
-
-from flask import Flask, render_template
-import pyodbc
-
-app = Flask(__name__)
-
-
-def get_products():
-    conn = pyodbc.connect(
-        "Driver={SQL Server};"
-        "Server=DESKTOP-3QJN7S3;"
-        "Database=Data_Model;"
-        "Trusted_Connection=yes;"
-    )
-
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT product_name, price, url
-        FROM Data_Model.dbo.orinabiji
-    """)
-
-    products = cursor.fetchall()
-
-    conn.close()
-
-    return products
-
-
-@app.route("/")
-def home():
-    products = get_products()
-    return render_template("D:\Data\Data Engineering\OrinabijiDiscounts\index.html", products=products)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
