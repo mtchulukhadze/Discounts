@@ -260,16 +260,6 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"მაიონეზი \"სლობოდა\" ოლივკოვი 67% 200გრ",
-        "price":"2.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
-        "title":"მაიონეზი \"ქართული\" სამარხვო 50% 200მლ",
-        "price":"1.39",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"წვენი \"ჰოპი\" ატამი (ტეტრაპაკი) 1ლ",
         "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
@@ -280,17 +270,22 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"წვენი \"სანდორა\" ატამი 0,95ლ",
-        "price":"3.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
-        "title":"წვენი \"ჰოპი\" ალოე ვერა 0,5ლ",
+        "title":"წვენი \"ჰოპი\" ფორთოხალი (ტეტრაპაკი) 1ლ",
         "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"წვენი \"სანდორა\" მულტიხილი 0,95ლ",
+        "title":"მაიონეზი \"სლობოდა\" ოლივკოვი 67% 200გრ",
+        "price":"2.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"მაიონეზი \"ქართული\" სამარხვო 50% 200მლ",
+        "price":"1.39",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"წვენი \"სანდორა\" ატამი 0,95ლ",
         "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -300,18 +295,23 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"წვენი \"ჰოპი\" ფორთოხალი (ტეტრაპაკი) 1ლ",
-        "price":"1.99",
+        "title":"წვენი \"სანდორა\" მულტიხილი 0,95ლ",
+        "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"წვენი \"სანდორა\" ვაშლი 0,95ლ",
-        "price":"3.99",
+        "title":"წვენი \"ჰოპი\" ალოე ვერა 0,5ლ",
+        "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"წვენი \"ლავი\" ალუბალი (ტეტრაპაკი) 1ლ",
         "price":"2.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"წვენი \"სანდორა\" ვაშლი 0,95ლ",
+        "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -605,6 +605,11 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
+        "title":"ორცხობილა \"ბისმაკი\" პეტიტ ბიურე 400გრ",
+        "price":"1.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
         "title":"ორცხობილა \"საიუბილეო\" სამარხვო 224გრ",
         "price":"3.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
@@ -612,11 +617,6 @@
     {
         "title":"ორცხობილა \"იაშკინო\" შოკოლადის ნატეხებით 200გრ",
         "price":"2.59",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
-        "title":"ორცხობილა \"ბისმაკი\" პეტიტ ბიურე 400გრ",
-        "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -830,13 +830,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი სენდვიჩი \"ჯენიო\" რძიანი შოკოლადით 135მლ",
-        "price":"2.49",
+        "title":"ნაყინი სენდვიჩი \"თოლია\" ვანილის\/ნამცხვრის ფირფიტებით 110მლ",
+        "price":"1.85",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი სენდვიჩი \"თოლია\" ვანილის\/ნამცხვრის ფირფიტებით 110მლ",
-        "price":"1.85",
+        "title":"ნაყინი სენდვიჩი \"ჯენიო\" რძიანი შოკოლადით 135მლ",
+        "price":"2.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -905,12 +905,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"მზესუმზირა \"ოკერ\" მოხალული მარილით 150გრ",
+        "title":"მზესუმზირა \"ოკერ\" მოხალული 180გრ",
         "price":"2.69",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"მზესუმზირა \"ოკერ\" მოხალული 180გრ",
+        "title":"მზესუმზირა \"ოკერ\" მოხალული მარილით 150გრ",
         "price":"2.69",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -925,12 +925,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ჩიფსი სიმინდის \"დორიტოსი\" ტაგო 70გრ",
+        "title":"ჩიფსი სიმინდის \"დორიტოსი\" ნაჩო 70გრ",
         "price":"2.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ჩიფსი სიმინდის \"დორიტოსი\" ნაჩო 70გრ",
+        "title":"ჩიფსი სიმინდის \"დორიტოსი\" ტაგო 70გრ",
         "price":"2.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -1025,13 +1025,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"კონსერვი ბოსტნეულის \"ნოსტიმო\" აივარი 360გრ",
-        "price":"3.99",
+        "title":"სოუსი პომიდვრის \"ნოსტიმო\" არაბიატა 350გრ",
+        "price":"3.59",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"სოუსი პომიდვრის \"ნოსტიმო\" არაბიატა 350გრ",
-        "price":"3.59",
+        "title":"კონსერვი ბოსტნეულის \"ნოსტიმო\" აივარი 360გრ",
+        "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -1125,13 +1125,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"სოსისი \"ლიდერ ფუდი\" გაუდას ყველით 500გრ",
-        "price":"7.99",
+        "title":"სოსისი \"პრემიო\" გერმანული 500გრ",
+        "price":"2.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"სოსისი \"პრემიო\" გერმანული 500გრ",
-        "price":"2.99",
+        "title":"სოსისი \"ლიდერ ფუდი\" გაუდას ყველით 500გრ",
+        "price":"7.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -1245,12 +1245,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"მოჭიქული ყველი \"ჩუდო\" ქოქოსით 35გრ",
+        "title":"მოჭიქული ყველი \"ჩუდო\" ვანილის 35გრ",
         "price":"1.29",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"მოჭიქული ყველი \"ჩუდო\" ვანილის 35გრ",
+        "title":"მოჭიქული ყველი \"ჩუდო\" ქოქოსით 35გრ",
         "price":"1.29",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -1415,12 +1415,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ბავშვის საფენი \"ბიბესტ\" 4 ზომა 8-18კგ (30ც)",
+        "title":"ბავშვის საფენი \"ბიბესტ\" 5 ზომა 12-25კგ (26ც)",
         "price":"7.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ბავშვის საფენი \"ბიბესტ\" 5 ზომა 12-25კგ (26ც)",
+        "title":"ბავშვის საფენი \"ბიბესტ\" 4 ზომა 8-18კგ (30ც)",
         "price":"7.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -1485,17 +1485,17 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
+        "title":"დეოდორანტი ”არკო” მამაკაცის სიგრილე (სპრეი) 150მლ",
+        "price":"4.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
         "title":"დეოდორანტი ”ფრაივასი” მამაკაცის GOLD (სპრეი) 150მლ",
         "price":"4.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"დეოდორანტი ”არკო” მამაკაცის თავდაჯერებულობა (სპრეი) 150მლ",
-        "price":"4.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
-        "title":"დეოდორანტი ”არკო” მამაკაცის სიგრილე (სპრეი) 150მლ",
         "price":"4.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -1560,22 +1560,22 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"სვანური \"ნატურალ პლიუსი\" 25% 800გრ",
-        "price":"5.49",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"სვანური \"ნატურალ პლიუსი\" 15% 800გრ",
         "price":"4.39",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"იოგურტი \"ფრუგურტი\" ატამი 2,5% 115გრ",
-        "price":"1.29",
+        "title":"სვანური \"ნატურალ პლიუსი\" 25% 800გრ",
+        "price":"5.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"იოგურტი \"ფრუგურტი\" მარწყვი 2,5% 115გრ",
+        "price":"1.29",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"იოგურტი \"ფრუგურტი\" ატამი 2,5% 115გრ",
         "price":"1.29",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
