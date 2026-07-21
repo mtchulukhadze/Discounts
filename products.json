@@ -300,17 +300,17 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"მაიონეზი \"სლობოდა\" ოლივკოვი 67% 200გრ",
-        "price":"2.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"მაიონეზი \"ქართული\" პროვონსალი 67% 200მლ",
         "price":"1.39",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"წვენი \"ლავი\" ალუბალი (ტეტრაპაკი) 1ლ",
+        "price":"2.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"მაიონეზი \"სლობოდა\" ოლივკოვი 67% 200გრ",
         "price":"2.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -825,12 +825,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი სენდვიჩი \"თოლია\" ვანილის\/ნამცხვრის ფირფიტებით 110მლ",
+        "title":"ნაყინი სენდვიჩი \"თოლია\" 110მლ",
         "price":"1.85",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი სენდვიჩი \"თოლია\" 110მლ",
+        "title":"ნაყინი სენდვიჩი \"თოლია\" ვანილის\/ნამცხვრის ფირფიტებით 110მლ",
         "price":"1.85",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -1685,11 +1685,6 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაგვის პარკი \"ნოვაქსი\" ზონარით 35ლ 15ც",
-        "price":"2.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"საწმენდი სითხე \"სიო\" უნივერსალური 750მლ",
         "price":"3.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
@@ -1747,6 +1742,11 @@
     {
         "title":"გოზინაყი მზესუმზირის \"აზოვი\" 150გრ",
         "price":"1.19",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"ნაგვის პარკი \"ნოვაქსი\" ზონარით 35ლ 15ც",
+        "price":"2.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
