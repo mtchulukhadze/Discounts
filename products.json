@@ -110,11 +110,6 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ლიმონათი \"iFUN\" მსხალი 2,0ლ",
-        "price":"2.49",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"ლიმონათი \"ნატახტარი\" ტარხუნა 1,0ლ",
         "price":"2.09",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
@@ -125,12 +120,17 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ლიმონათი \"ნატახტარი\" ნაღები 1,0ლ",
-        "price":"2.09",
+        "title":"ლიმონათი \"iFUN\" მსხალი 2,0ლ",
+        "price":"2.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"ლიმონათი „ნატახტარი“ ფეიხოა 1ლ",
+        "price":"2.09",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"ლიმონათი \"ნატახტარი\" ნაღები 1,0ლ",
         "price":"2.09",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -505,13 +505,18 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
+        "title":"შოკოლადის ბატონი \"სნიკერსი\" თეთრი შოკოლადი 81გრ",
+        "price":"2.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
         "title":"შოკოლადის ბატონი \"როშენი\" შავი შოკოლადით 43გრ",
         "price":"1.19",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"შოკოლადის ბატონი \"სნიკერსი\" თეთრი შოკოლადი 81გრ",
-        "price":"2.99",
+        "title":"შოკოლადის ბატონი \"ტვიქსი\" 55გრ",
+        "price":"0.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -525,18 +530,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"შოკოლადის ბატონი \"ტვიქსი\" 55გრ",
-        "price":"0.99",
+        "title":"ვაფლი \"მილკა\" 30გრ",
+        "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"შოკოლადის ბატონი \"ტობლერონი\" თეთრი შოკოლადი თაფლისა და ნუშის ნუგათი 100გრ",
         "price":"4.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
-        "title":"ვაფლი \"მილკა\" 30გრ",
-        "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -665,12 +665,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ორცხობილა \"სანდომი\" ბალიში ალუბლის ჯემით 350გრ",
+        "title":"ორცხობილა \"ბელვიტა\" თაფლით 225გრ",
         "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ორცხობილა \"ბელვიტა\" თაფლით 225გრ",
+        "title":"ორცხობილა \"სანდომი\" ბალიში ალუბლის ჯემით 350გრ",
         "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -690,13 +690,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ორცხობილა \"ბელვიტა\" შოკოლადის მარცვლებით 225გრ",
-        "price":"3.99",
+        "title":"ორცხობილა \"ლავიტა\" კაკაოთი შოკოლადის გლაზურით 150გრ",
+        "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ორცხობილა \"ლავიტა\" კაკაოთი შოკოლადის გლაზურით 150გრ",
-        "price":"1.99",
+        "title":"ორცხობილა \"ბელვიტა\" შოკოლადის მარცვლებით 225გრ",
+        "price":"3.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -810,22 +810,22 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"კექსი \"ოზმო\" ოგოპოგო 34გრ",
-        "price":"0.99",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"კანფეტი დრაჟე \"პანდა\" 150გრ",
         "price":"4.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ხილის ფაფა \"აგუშა\" მულტიხილი 90გრ",
-        "price":"1.99",
+        "title":"კექსი \"ოზმო\" ოგოპოგო 34გრ",
+        "price":"0.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"ხილის ფაფა \"აგუშა\" ვაშლი-ბანანი-ნამცხვარი 90გრ",
+        "price":"1.99",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"ხილის ფაფა \"აგუშა\" მულტიხილი 90გრ",
         "price":"1.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -870,13 +870,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი ჯოხზე \"ინდიგო\" ვანილის\/რძიანი შოკოლადის სარკალში 130მლ",
-        "price":"2.99",
+        "title":"ნაყინი ჯოხზე \"თოლია\" ვანილის\/რძიანი შოკოლადის სარკალში 95მლ",
+        "price":"1.25",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი ჯოხზე \"თოლია\" ვანილის\/რძიანი შოკოლადის სარკალში 95მლ",
-        "price":"1.25",
+        "title":"ნაყინი ჯოხზე \"ინდიგო\" ვანილის\/რძიანი შოკოლადის სარკალში 130მლ",
+        "price":"2.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -910,18 +910,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი სიურპრიზით \"სკუპი\" ვანილის\/რძიანი შოკოლადის ბურთულებით \/ბიჭი\/ 60გრ",
-        "price":"4.09",
-        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
-    },
-    {
         "title":"ნაყინი სიურპრიზით \"სკუპი\" ვანილის\/რძიანი შოკოლადის ბურთულებით \/გოგო\/ 60გრ",
         "price":"4.09",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი საოჯახო \"თოლია\" ვანილის\/მარწყვის ჯემით 1000მლ",
-        "price":"7.10",
+        "title":"ნაყინი სიურპრიზით \"სკუპი\" ვანილის\/რძიანი შოკოლადის ბურთულებით \/ბიჭი\/ 60გრ",
+        "price":"4.09",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -930,12 +925,17 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაყინი საოჯახო \"თოლია\" მარწყვი 1000მლ",
+        "title":"ნაყინი საოჯახო \"თოლია\" ვანილის\/მარწყვის ჯემით 1000მლ",
         "price":"7.10",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
         "title":"ნაყინი საოჯახო \"თოლია\" ვანილის\/თხევადი შოკოლადით 1000მლ",
+        "price":"7.10",
+        "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
+    },
+    {
+        "title":"ნაყინი საოჯახო \"თოლია\" მარწყვი 1000მლ",
         "price":"7.10",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
@@ -1290,13 +1290,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"ნაღები რძის \"პრეზიდენტი\" 35,1% 500მლ",
-        "price":"11.99",
+        "title":"რძე \"სვანური\" 3,2% 900მლ",
+        "price":"2.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"რძე \"სვანური\" 3,2% 900მლ",
-        "price":"2.99",
+        "title":"ნაღები რძის \"პრეზიდენტი\" 35,1% 500მლ",
+        "price":"11.99",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -1365,13 +1365,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"კვერცხი \"კუმისის ფერმერი\" ქათმის \/10ც\/",
-        "price":"5.39",
+        "title":"კვერცხი \"კუმისი\" ქათმის \/1\/ \/10ც\/",
+        "price":"4.49",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"კვერცხი \"კუმისი\" ქათმის \/1\/ \/10ც\/",
-        "price":"4.49",
+        "title":"კვერცხი \"კუმისის ფერმერი\" ქათმის \/10ც\/",
+        "price":"5.39",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -1685,13 +1685,13 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"იოგურტი დასალევი \"პარმალატი\" მოცვი ჩია პრობიოტიკებით 290გრ",
-        "price":"2.95",
+        "title":"იოგურტი \"ჩუდო\" ალუბალი\/ბალი 2,5% 290გრ",
+        "price":"3.29",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"იოგურტი \"ჩუდო\" ალუბალი\/ბალი 2,5% 290გრ",
-        "price":"3.29",
+        "title":"იოგურტი დასალევი \"პარმალატი\" მოცვი ჩია პრობიოტიკებით 290გრ",
+        "price":"2.95",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
@@ -1780,12 +1780,12 @@
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"კატის საკვები \"ფელიქსი\" ჟელე საქონლის ხორცით 75გრ",
+        "title":"კნუტის საკვები \"ფელიქსი\" ჟელე ქათმის ხორცით 75გრ",
         "price":"1.35",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
     {
-        "title":"კნუტის საკვები \"ფელიქსი\" ჟელე ქათმის ხორცით 75გრ",
+        "title":"კატის საკვები \"ფელიქსი\" ჟელე საქონლის ხორცით 75გრ",
         "price":"1.35",
         "full_url":"https:\/\/2nabiji.ge\/ge\/search?searchId=64c19575b3118b3676d26898#"
     },
