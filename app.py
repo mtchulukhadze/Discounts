@@ -118,7 +118,7 @@ for product in products:
 
 
 """
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, send_file   
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -175,7 +175,7 @@ def scrape_products(url: str) -> list:
 # ✅ ROUTES defined AFTER app is created
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return send_file('index.html')
 
 @app.route('/api/products')
 def get_products():
