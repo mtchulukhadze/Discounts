@@ -124,7 +124,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # ✅ Initialize app FIRST (before routes!)
-app = Flask(__name__)
+app = Flask(__name__, , static_folder='.')
 
 URL = "https://2nabiji.ge/ge/search?searchId=64c19575b3118b3676d26898"
 SCROLL_ROUNDS = 15
