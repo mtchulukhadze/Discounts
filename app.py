@@ -182,7 +182,18 @@ def scrape_products(url: str) -> list:
 
     return results
 
-items = scrape_products(URL)
+# items = scrape_products(URL)
+from flask import Flask, jsonify
+
+@app.route('/')
+def home():
+    return render_template('index.html')  # Your existing HTML file
+
+@app.route('/api/products')
+def get_products():
+    items = scrape_products(URL)
+    return jsonify(items)
+
 df = pd.DataFrame(items)
 #print(df.to_string ())
 
