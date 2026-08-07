@@ -175,7 +175,7 @@ def scrape_products(url: str) -> list:
 # ✅ ROUTES defined AFTER app is created
 @app.route('/')
 def home():
-    return send_file('index.html')
+    return send_file('index-render.html')
 
 @app.route('/api/products')
 def get_products():
