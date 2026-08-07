@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ფასდაკლებები — დღევანდელი შეთავაზებები</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f1729 0%, #1a1f3a 100%);
+  color: #e5e7eb;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ====== HEADER ====== */
+.site-header {
+  background: rgba(15, 23, 41, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.brand-name {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-meta {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-count strong {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+/* ====== HERO ====== */
+.hero {
+  padding: 60px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #f3f4f6;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: #9ca3af;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.hero-tag {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.tag-hole {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #0f1729;
+  border-radius: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.tag-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #6366f1;
+  width: 180px;
+  height: 180px;
+  border: 2px dashed rgba(99, 102, 241, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-line {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9ca3af;
+}
+
+/* ====== CONTROLS ====== */
+.controls {
+  padding: 40px 0;
+  border-top: 1px solid rgba(99, 102, 241, 0.15);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+  background: rgba(99, 102, 241, 0.03);
+}
+
+.controls-row {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  background: rgba(31, 41, 55, 0.6);
+  border: 1.5px solid rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(31, 41, 55, 0.8);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+#searchInput::placeholder {
+  color: #6b7280;
+}
+
+.sort-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sort-box label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+#sortSelect {
+  padding: 12px 14px;
+  background: rgba(31, 41, 55, 0.6);
+  border: 1.5px solid rgba(99, 102, 241, 0.3);
+  border-radius: 10px;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#sortSelect:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(31, 41, 55, 0.8);
+}
+
+#sortSelect option {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+/* ====== MAIN CONTENT ====== */
+main {
+  padding: 60px 20px;
+}
+
+.state-banner {
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+}
+
+.state-banner.warning {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fcd34d;
+}
+
+.state-banner.loading::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #6366f1;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ====== GRID ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* ====== CARD ====== */
+.card {
+  position: relative;
+  background: rgba(31, 41, 55, 0.5);
+  border: 1.5px solid rgba(99, 102, 241, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(31, 41, 55, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.15);
+}
+
+.card-punch {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: #0f1729;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-radius: 50%;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.tear-line {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.3) 0%, transparent 100%);
+  margin: 12px 0;
+  border: none;
+}
+
+.card-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-price {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6366f1;
+}
+
+.card-currency {
+  font-size: 14px;
+  margin-left: 2px;
+  color: #9ca3af;
+}
+
+.card-link {
+  padding: 8px 12px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-link:hover {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.5);
+  color: #e0e7ff;
+}
+
+/* ====== EMPTY STATE ====== */
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.empty-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-bottom: 12px;
+}
+
+.empty-sub {
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+/* ====== FOOTER ====== */
+.site-footer {
+  background: rgba(15, 23, 41, 0.8);
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 40px 0;
+  color: #6b7280;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .hero-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .controls-row {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-meta {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <span class="brand-mark">%</span>
+        <span class="brand-name">ფასდაკლება</span>
+      </div>
+      <nav class="header-meta">
+        <span id="lastUpdated" class="meta-item">იტვირთება…</span>
+        <span class="meta-item meta-count"><strong id="productCount">0</strong> პროდუქტი</span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-row">
+      <div class="hero-copy">
+        <p class="eyebrow">2nabiji.ge — ყოველდღიური მონიტორინგი</p>
+        <h1>დღეს ბაზარზე<br>ყველაზე დაბალი ფასები</h1>
+        <p class="hero-sub">ჩვენი სისტემა ავტომატურად ამოწმებს პროდუქტებს და აქ აჩვენებს მხოლოდ ფასდაკლებულებს — ხელით ძებნა აღარ გჭირდებათ.</p>
+      </div>
+      <div class="hero-tag" aria-hidden="true">
+        <div class="tag-hole"></div>
+        <div class="tag-percent">SALE</div>
+        <div class="tag-line">დღეს</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="controls">
+    <div class="wrap controls-row">
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.25" stroke="currentColor" stroke-width="1.5"/><path d="M11 11L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="text" placeholder="მოძებნე პროდუქტი, მაგ: რძე, პური, ხორცი…">
+      </div>
+      <div class="sort-box">
+        <label for="sortSelect">დალაგება</label>
+        <select id="sortSelect">
+          <option value="default">ახალი პირველი</option>
+          <option value="price-asc">ფასი: დაბლიდან მაღლა</option>
+          <option value="price-desc">ფასი: მაღლიდან დაბლა</option>
+          <option value="name-asc">სახელით (ა–ჰ)</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div id="stateBanner" class="state-banner" hidden></div>
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <div id="emptyState" class="empty-state" hidden>
+      <p class="empty-title">არაფერი მოიძებნა</p>
+      <p class="empty-sub">სცადეთ სხვა საძიებო სიტყვა ან გაასუფთავეთ ფილტრი.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>მონაცემები მოგროვილია ავტომატურად საჯარო გვერდიდან და ემსახურება ინფორმაციულ მიზნებს. ფასები შესაძლოა შეიცვალოს მაღაზიაში.</p>
+    </div>
+  </footer>
+
+<script>
+// ---- Sample fallback data (shown until the /api/products backend is connected) ----
+const FALLBACK_PRODUCTS = [
+  { id: 1, title: "მაგთი რძე 2.5% 1ლ", price: "3.20", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 2, title: "ბოდბე ხაჭაპური იმერული 400გრ", price: "6.90", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 3, title: "სანთა ღვინო საფერავი 750მლ", price: "12.50", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 4, title: "ქათმის ფილე 1კგ", price: "14.80", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 5, title: "ბანანი 1კგ", price: "2.99", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+  { id: 6, title: "ჩირაღი ზეთი ზეითუნის 500მლ", price: "9.40", full_url: "https://2nabiji.ge", scraped_at: new Date().toISOString() },
+];
+
+const gridEl = document.getElementById("grid");
+const emptyEl = document.getElementById("emptyState");
+const bannerEl = document.getElementById("stateBanner");
+const countEl = document.getElementById("productCount");
+const updatedEl = document.getElementById("lastUpdated");
+const searchInput = document.getElementById("searchInput");
+const sortSelect = document.getElementById("sortSelect");
+
+let allProducts = [];
+
+function showBanner(text, kind) {
+  bannerEl.textContent = text;
+  bannerEl.hidden = false;
+  bannerEl.className = "state-banner " + (kind || "");
+}
+function hideBanner() { bannerEl.hidden = true; }
+
+function formatPrice(p) {
+  const n = parseFloat(String(p).replace(",", "."));
+  return isNaN(n) ? p : n.toFixed(2);
+}
+
+function card(product) {
+  const price = formatPrice(product.price);
+  return `
+    <article class="card">
+      <div class="card-punch"></div>
+      <div class="card-badge">SALE</div>
+      <h3 class="card-title">${escapeHtml(product.title)}</h3>
+      <div class="tear-line"></div>
+      <div class="card-price-row">
+        <span class="card-price">${price}<span class="card-currency">₾</span></span>
+        <a class="card-link" href="${product.full_url}" target="_blank" rel="noopener">მაღაზიაში ნახვა →</a>
+      </div>
+    </article>
+  `;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str ?? "";
+  return div.innerHTML;
+}
+
+function render(products) {
+  countEl.textContent = products.length;
+  if (products.length === 0) {
+    gridEl.innerHTML = "";
+    emptyEl.hidden = false;
+    return;
+  }
+  emptyEl.hidden = true;
+  gridEl.innerHTML = products.map(card).join("");
+}
+
+function applyFiltersAndSort() {
+  const q = searchInput.value.trim().toLowerCase();
+  let list = allProducts.filter(p => p.title.toLowerCase().includes(q));
+
+  switch (sortSelect.value) {
+    case "price-asc":
+      list.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      break;
+    case "price-desc":
+      list.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      break;
+    case "name-asc":
+      list.sort((a, b) => a.title.localeCompare(b.title, "ka"));
+      break;
+    default:
+      break; // keep server / fetch order
+  }
+  render(list);
+}
+
+async function loadProducts() {
+  showBanner("პროდუქტები იტვირთება…", "loading");
+  try {
+    const res = await fetch("products.json?_=" + Date.now());
+    if (!res.ok) throw new Error("Bad response: " + res.status);
+    const data = await res.json();
+    
+    // Expect format: { scraped_at: "...", products: [...] }
+    if (Array.isArray(data)) {
+      allProducts = data;
+      updatedEl.textContent = "განახლდა: " + new Date().toLocaleString("ka-GE");
+    } else if (data.products && Array.isArray(data.products)) {
+      allProducts = data.products;
+      updatedEl.textContent = "განახლდა: " + new Date(data.scraped_at).toLocaleString("ka-GE");
+    } else {
+      throw new Error("Invalid JSON format");
+    }
+    hideBanner();
+  } catch (err) {
+    console.error("Error loading products:", err);
+    allProducts = FALLBACK_PRODUCTS;
+    showBanner("⚠ დემო მონაცემები — products.json ჯერ არ მოიძებნა", "warning");
+    updatedEl.textContent = "დემო რეჟიმი";
+  }
+  applyFiltersAndSort();
+}
+
+searchInput.addEventListener("input", applyFiltersAndSort);
+sortSelect.addEventListener("change", applyFiltersAndSort);
+
+loadProducts();
+</script>
+</body>
+</html>
