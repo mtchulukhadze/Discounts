@@ -118,21 +118,40 @@ for product in products:
 
 
 """
-from flask import Flask, jsonify, send_file   
+from flask import Flask, jsonify, send_file
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
-import pandas as pd
+from pathlib import Path
+import json
+import os
 
-# ✅ Initialize app FIRST (before routes!)
-app = Flask(__name__, static_folder='.')
+# --------------------------------------------------
+# APP
+# --------------------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent
+
+app = Flask(
+    __name__,
+    static_folder=str(BASE_DIR)
+)
+
+
+# --------------------------------------------------
+# SCRAPER
+# --------------------------------------------------
 
 URL = "https://2nabiji.ge/ge/search?searchId=64c19575b3118b3676d26898"
+
 SCROLL_ROUNDS = 15
 SCROLL_PAUSE_MS = 1500
 
+
 def scrape_products(url: str) -> list:
     with sync_playwright() as p:
+
         browser = p.chromium.launch(headless=True)
+
         page = browser.new_page(
             user_agent=(
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -140,50 +159,180 @@ def scrape_products(url: str) -> list:
                 "Chrome/124.0.0.0 Safari/537.36"
             )
         )
-        print(f"Opening {url} …")
-        page.goto(url, wait_until="domcontentloaded", timeout=30_000)
-        page.wait_for_selector("a[class*='ProductCard_title']", timeout=15_000)
+
+        print(f"Opening {url} ...")
+
+        page.goto(
+            url,
+            wait_until="domcontentloaded",
+            timeout=30_000
+        )
+
+        page.wait_for_selector(
+            "a[class*='ProductCard_title']",
+            timeout=15_000
+        )
+
         prev_count = 0
+
         for i in range(SCROLL_ROUNDS):
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+
+            page.evaluate(
+                "window.scrollTo(0, document.body.scrollHeight)"
+            )
+
             page.wait_for_timeout(SCROLL_PAUSE_MS)
-            cur_count = page.locator("a[class*='ProductCard_title']").count()
-            print(f"  scroll {i+1}: {cur_count} products visible")
+
+            cur_count = page.locator(
+                "a[class*='ProductCard_title']"
+            ).count()
+
+            print(
+                f"  scroll {i + 1}: "
+                f"{cur_count} products visible"
+            )
+
             if cur_count == prev_count:
-                print("  No new items — stopping early.")
+                print("  No new items - stopping early.")
                 break
+
             prev_count = cur_count
+
         html = page.content()
+
         browser.close()
+
+
+    # --------------------------------------------------
+    # PARSE PRODUCTS
+    # --------------------------------------------------
+
     soup = BeautifulSoup(html, "html.parser")
-    cards = soup.select("div[class*='ProductCard_container']")
+
+    cards = soup.select(
+        "div[class*='ProductCard_container']"
+    )
+
     results = []
+
     for idx, card in enumerate(cards, start=1):
-        title_tag = card.select_one("a[class*='ProductCard_title']")
-        price_tag = card.select_one("a[class*='ProductCard_productInfo__price'] span")
-        title = title_tag.get_text(strip=True) if title_tag else ""
-        price = price_tag.get_text(strip=True) if price_tag else ""
-        href  = title_tag.get("href", "") if title_tag else ""
+
+        title_tag = card.select_one(
+            "a[class*='ProductCard_title']"
+        )
+
+        price_tag = card.select_one(
+            "a[class*='ProductCard_productInfo__price'] span"
+        )
+
+        title = (
+            title_tag.get_text(strip=True)
+            if title_tag
+            else ""
+        )
+
+        price = (
+            price_tag.get_text(strip=True)
+            if price_tag
+            else ""
+        )
+
+        href = (
+            title_tag.get("href", "")
+            if title_tag
+            else ""
+        )
+
+        if href.startswith("http"):
+            full_url = href
+        else:
+            full_url = "https://2nabiji.ge" + href
+
         results.append({
             "id": idx,
             "title": title,
             "price": price,
-            "full_url": "https://2nabiji.ge" + href,
+            "full_url": full_url
         })
+
+    print(f"Scraped {len(results)} products")
+
     return results
 
-# ✅ ROUTES defined AFTER app is created
-@app.route('/')
-def home():
-    return send_file('index-render.html')
 
-@app.route('/api/products')
+# --------------------------------------------------
+# ROUTES
+# --------------------------------------------------
+
+@app.route("/")
+def home():
+
+    return send_file(
+        BASE_DIR / "index-render.html"
+    )
+
+
+# IMPORTANT:
+# This serves your EXISTING products.json file.
+# It does NOT scrape anything.
+
+@app.route("/products.json")
+def products_json():
+
+    json_file = BASE_DIR / "products.json"
+
+    if not json_file.exists():
+
+        return jsonify({
+            "error": "products.json not found",
+            "path": str(json_file)
+        }), 404
+
+    return send_file(
+        json_file,
+        mimetype="application/json"
+    )
+
+
+# --------------------------------------------------
+# API
+# --------------------------------------------------
+
+@app.route("/api/products")
 def get_products():
+
     items = scrape_products(URL)
+
     return jsonify(items)
 
-# ✅ Only run if executed directly (not when imported by gunicorn)
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+
+# --------------------------------------------------
+# HEALTH CHECK
+# --------------------------------------------------
+
+@app.route("/health")
+def health():
+
+    return jsonify({
+        "status": "ok"
+    })
+
+
+# --------------------------------------------------
+# LOCAL DEVELOPMENT
+# --------------------------------------------------
+
+if __name__ == "__main__":
+
+    port = int(
+        os.environ.get("PORT", 5000)
+    )
+
+    app.run(
+        debug=False,
+        host="0.0.0.0",
+        port=port
+    )
+
 
 
