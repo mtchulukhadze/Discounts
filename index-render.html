@@ -1,1125 +1,406 @@
 <!DOCTYPE html>
 <html lang="ka">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ფასდაკლებები</title>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-
-body{
-
-    font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Inter",
-    sans-serif;
-
-    background:#f5f5f7;
-
-    color:#1d1d1f;
-
-}
-
-
-.container{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:0 24px;
-
-}
-
-
-
-/* HEADER */
-
-
-header{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:50;
-
-    background:
-    rgba(245,245,247,.85);
-
-    backdrop-filter:blur(20px);
-
-    border-bottom:
-    1px solid #ddd;
-
-
-}
-
-
-.header{
-
-    height:70px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-
-.logo{
-
-    font-size:24px;
-
-    font-weight:700;
-
-    letter-spacing:-1px;
-
-}
-
-
-.counter{
-
-    color:#6e6e73;
-
-    font-size:14px;
-
-}
-
-
-
-/* HERO */
-
-
-.hero{
-
-    text-align:center;
-
-    padding:90px 0 60px;
-
-}
-
-
-.hero h1{
-
-    font-size:64px;
-
-    line-height:1.05;
-
-    letter-spacing:-3px;
-
-}
-
-
-.hero p{
-
-    margin-top:25px;
-
-    color:#6e6e73;
-
-    font-size:21px;
-
-}
-
-
-
-
-/* SEARCH */
-
-
-.controls{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-bottom:50px;
-
-}
-
-
-.search{
-
-    flex:1;
-
-}
-
-
-input,
-select{
-
-
-    height:55px;
-
-    width:100%;
-
-
-    background:white;
-
-
-    border:
-
-    1px solid #d2d2d7;
-
-
-    border-radius:16px;
-
-
-    padding:0 20px;
-
-
-    font-size:16px;
-
-
-    outline:none;
-
-
-}
-
-
-input:focus,
-select:focus{
-
-    border-color:#0071e3;
-
-}
-
-
-
-
-.sort{
-
-    width:220px;
-
-}
-
-
-
-/* GRID */
-
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:
-
-    repeat(auto-fill,minmax(300px,1fr));
-
-
-    gap:28px;
-
-}
-
-
-
-
-/* PRODUCT CARD */
-
-
-.card{
-
-
-    background:white;
-
-
-    border-radius:30px;
-
-
-    padding:30px;
-
-
-    min-height:390px;
-
-
-    display:flex;
-
-    flex-direction:column;
-
-
-    transition:.25s;
-
-
-    border:
-
-    1px solid #e5e5e5;
-
-
-}
-
-
-
-.card:hover{
-
-
-    transform:translateY(-5px);
-
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.08);
-
-
-}
-
-
-
-
-.product-image{
-
-
-    height:150px;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    margin-bottom:25px;
-
-
-}
-
-
-.product-image img{
-
-
-    max-height:140px;
-
-    max-width:160px;
-
-    object-fit:contain;
-
-
-}
-
-
-
-.placeholder{
-
-    font-size:70px;
-
-}
-
-
-
-
-.title{
-
-
-    font-size:21px;
-
-
-    font-weight:600;
-
-
-    line-height:1.4;
-
-
-}
-
-
-
-
-.price-box{
-
-    margin-top:auto;
-
-    padding-top:25px;
-
-
-}
-
-
-
-.old-price{
-
-
-    color:#86868b;
-
-
-    text-decoration:line-through;
-
-
-    font-size:15px;
-
-
-}
-
-
-.price{
-
-
-    font-size:34px;
-
-
-    font-weight:700;
-
-
-    letter-spacing:-1px;
-
-
-    margin-top:5px;
-
-
-}
-
-
-
-
-.discount{
-
-
-    display:inline-block;
-
-
-    margin-top:10px;
-
-
-    color:#34c759;
-
-
-    font-weight:600;
-
-
-    font-size:14px;
-
-
-}
-
-
-
-
-
-.actions{
-
-
-    margin-top:25px;
-
-
-}
-
-
-.shop-btn{
-
-
-    display:block;
-
-
-    text-align:center;
-
-
-    background:#0071e3;
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    padding:13px;
-
-
-    border-radius:25px;
-
-
-    font-weight:500;
-
-
-    transition:.2s;
-
-
-}
-
-
-
-.shop-btn:hover{
-
-
-    background:#0077ed;
-
-
-}
-
-
-
-/* STATES */
-
-
-.banner{
-
-
-    background:white;
-
-    padding:18px;
-
-    border-radius:16px;
-
-    margin-bottom:25px;
-
-    color:#6e6e73;
-
-}
-
-
-.empty{
-
-    text-align:center;
-
-    padding:80px;
-
-    color:#6e6e73;
-
-}
-
-
-
-/* FOOTER */
-
-
-footer{
-
-    text-align:center;
-
-    padding:60px 0;
-
-    color:#86868b;
-
-}
-
-
-
-
-@media(max-width:700px){
-
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-
-.controls{
-
-flex-direction:column;
-
-}
-
-
-.sort{
-
-width:100%;
-
-}
-
-
-}
-
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფასების კატალოგი</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        #searchInput {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #searchInput::placeholder {
+            color: #999;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .product-price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .product-price span {
+            font-size: 20px;
+            color: #666;
+            margin-left: 5px;
+        }
+
+        .buy-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .buy-btn:hover {
+            opacity: 0.9;
+        }
+
+        .buy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .no-results {
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            padding: 40px;
+        }
+
+        .product-count {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pagination button {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination button.active {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .page-info {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .pagination {
+                gap: 5px;
+            }
+
+            .pagination button {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
-
-
-<header>
-
-<div class="container header">
-
-
-<div class="logo">
-
-ფასდაკლებები
-
-</div>
-
-
-<div class="counter">
-
-<span id="productCount">0</span> პროდუქტი
-
-</div>
-
-
-</div>
-
-</header>
-
-
-
-<section class="hero">
-
-
-<div class="container">
-
-
-<h1>
-
-საუკეთესო<br>
-
-ფასები ერთ ადგილზე
-
-</h1>
-
-
-<p>
-
-ავტომატურად განახლებული შეთავაზებები 2nabiji.ge-დან
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-<main class="container">
-
-
-
-<div class="controls">
-
-
-<div class="search">
-
-<input
-
-id="searchInput"
-
-placeholder="🔍 მოძებნე პროდუქტი..."
-
->
-
-</div>
-
-
-
-<div class="sort">
-
-
-<select id="sortSelect">
-
-
-<option value="default">
-
-ახალი პირველი
-
-</option>
-
-
-<option value="price-asc">
-
-ფასი ზრდადობით
-
-</option>
-
-
-<option value="price-desc">
-
-ფასი კლებადობით
-
-</option>
-
-
-<option value="name-asc">
-
-სახელით
-
-</option>
-
-
-</select>
-
-
-</div>
-
-
-</div>
-
-
-
-<div id="stateBanner" class="banner" hidden></div>
-
-
-<div id="grid" class="grid"></div>
-
-
-<div id="emptyState" class="empty" hidden>
-
-<h2>
-
-პროდუქტი ვერ მოიძებნა
-
-</h2>
-
-</div>
-
-</div>
-
-</main>
-
-
-<footer>
-
-© 2026 ფასდაკლებები
-
-<br>
-
-მონაცემები ავტომატურად ახლდება
-
-</footer>
-
-
-
-<script>
-
-
-// ===============================
-// თქვენი PRODUCTS JSON ᲛᲝᲜᲐᲪᲔᲛᲔᲑᲘ
-// ===============================
-// აქ ჩაწერეთ თქვენი products.json მონაცემები
-
-const PRODUCTS_DATA = [
-
-{
-    title:"მაგთი რძე 2.5% 1ლ",
-    price:"3.20",
-    full_url:"https://2nabiji.ge",
-    image:""
-},
-
-
-{
-    title:"ბანანი 1კგ",
-    price:"2.99",
-    full_url:"https://2nabiji.ge",
-    image:""
-},
-
-
-{
-    title:"ქათმის ფილე 1კგ",
-    price:"14.80",
-    full_url:"https://2nabiji.ge",
-    image:""
-}
-
-
-];
-
-
-
-
-// ===============================
-// ELEMENTS
-// ===============================
-
-
-const grid =
-document.getElementById("grid");
-
-
-const searchInput =
-document.getElementById("searchInput");
-
-
-const sortSelect =
-document.getElementById("sortSelect");
-
-
-const productCount =
-document.getElementById("productCount");
-
-
-const banner =
-document.getElementById("stateBanner");
-
-
-const empty =
-document.getElementById("emptyState");
-
-
-
-let products=[];
-
-
-
-
-// ===============================
-// HELPERS
-// ===============================
-
-
-function escapeHtml(text){
-
-const div=document.createElement("div");
-
-div.textContent=text ?? "";
-
-return div.innerHTML;
-
-}
-
-
-
-function formatPrice(price){
-
-let value=parseFloat(
-String(price).replace(",",".")
-);
-
-
-if(isNaN(value))
-return price;
-
-
-return value.toFixed(2);
-
-}
-
-
-
-
-
-// ===============================
-// PRODUCT CARD
-// ===============================
-
-
-function createCard(product){
-
-
-let image = product.image;
-
-
-let imageHTML = image ?
-
-`
-<img src="${image}" alt="">
-`
-
-:
-
-`
-<div class="placeholder">
-🛒
-</div>
-`;
-
-
-
-return `
-
-<div class="card">
-
-
-<div class="product-image">
-
-${imageHTML}
-
-</div>
-
-
-
-<div class="title">
-
-${escapeHtml(product.title)}
-
-</div>
-
-
-
-<div class="price-box">
-
-
-<div class="old-price">
-
-</div>
-
-
-<div class="price">
-
-${formatPrice(product.price)} ₾
-
-</div>
-
-
-
-<div class="discount">
-
-დღევანდელი შეთავაზება
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="actions">
-
-
-<a
-
-class="shop-btn"
-
-href="${product.full_url}"
-
-target="_blank"
-
-rel="noopener">
-
-ნახვა მაღაზიაში →
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-`;
-
-}
-
-
-
-
-// ===============================
-// RENDER
-// ===============================
-
-
-function render(list){
-
-
-productCount.textContent=list.length;
-
-
-
-if(list.length===0){
-
-
-grid.innerHTML="";
-
-empty.hidden=false;
-
-return;
-
-
-}
-
-
-
-empty.hidden=true;
-
-
-grid.innerHTML=
-
-list.map(createCard).join("");
-
-
-
-}
-
-
-
-
-// ===============================
-// FILTER + SORT
-// ===============================
-
-
-function update(){
-
-
-
-let result=[...products];
-
-
-
-let search =
-searchInput.value
-.trim()
-.toLowerCase();
-
-
-
-if(search){
-
-
-result=result.filter(item=>
-
-
-item.title
-
-.toLowerCase()
-
-.includes(search)
-
-
-);
-
-
-}
-
-
-
-
-switch(sortSelect.value){
-
-
-case "price-asc":
-
-
-result.sort((a,b)=>
-
-
-parseFloat(a.price)-
-
-parseFloat(b.price)
-
-
-);
-
-
-break;
-
-
-
-case "price-desc":
-
-
-result.sort((a,b)=>
-
-
-parseFloat(b.price)-
-
-parseFloat(a.price)
-
-
-);
-
-
-break;
-
-
-
-case "name-asc":
-
-
-result.sort((a,b)=>
-
-
-a.title.localeCompare(
-b.title,
-"ka"
-)
-
-
-);
-
-
-break;
-
-
-}
-
-
-
-render(result);
-
-
-}
-
-
-
-
-// ===============================
-// LOAD PRODUCTS
-// ===============================
-
-async function loadProducts(){
-
-    // რენდერზე და ყველაფერზე მუშაობს
-    // რადგან JSON HTML-ში წერია
-    try {
-        products = PRODUCTS_DATA;
-        banner.hidden = true;
-    }
-    catch(error) {
-        console.log(error);
-        products = PRODUCTS_DATA;
-    }
-    
-    update();
-}
-
-
-
-
-// ===============================
-// EVENTS
-// ===============================
-
-
-searchInput
-.addEventListener(
-"input",
-update
-);
-
-
-
-sortSelect
-.addEventListener(
-"change",
-update
-);
-
-
-
-
-// START
-
-loadProducts();
-
-
-
-</script>
-
-
+    <div class="container">
+        <header>
+            <h1>🍷 ფასების კატალოგი</h1>
+            <p>ღვინო, ლუდი, სპირტი</p>
+        </header>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="🔍 ძებნა (მაგ: ღვინო, ლუდი...)"
+            >
+        </div>
+
+        <div class="product-count">
+            <span id="count">იტვირთება...</span>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="no-results hidden" id="noResults">
+            პროდუქტი ვერ მოიძებნა
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+        <div class="page-info" id="pageInfo"></div>
+    </div>
+
+    <script>
+        const productsGrid = document.getElementById('productsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const countSpan = document.getElementById('count');
+        const noResults = document.getElementById('noResults');
+        const paginationContainer = document.getElementById('pagination');
+        const pageInfo = document.getElementById('pageInfo');
+
+        const PRODUCTS_PER_PAGE = 8;
+
+        let allProducts = [];
+        let filteredProducts = [];
+        let currentPage = 1;
+
+        // 📥 Load JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('./products.json');
+                if (!response.ok) {
+                    throw new Error('ფაილი ვერ ჩატვირთა');
+                }
+                allProducts = await response.json();
+                console.log(`✅ ${allProducts.length} პროდუქტი ჩატვირთა`);
+                filteredProducts = allProducts;
+                renderPage();
+            } catch (error) {
+                console.error('Error:', error);
+                productsGrid.innerHTML = '<div style="color: white; font-size: 18px;">❌ პროდუქტი ვერ ჩატვირთა. products.json ფაილი სწორ ადგილას არის?</div>';
+            }
+        }
+
+        // 🎨 Display products for current page
+        function renderPage() {
+            productsGrid.innerHTML = '';
+
+            if (filteredProducts.length === 0) {
+                noResults.classList.remove('hidden');
+                countSpan.textContent = '0 პროდუქტი';
+                paginationContainer.innerHTML = '';
+                pageInfo.innerHTML = '';
+                return;
+            }
+
+            noResults.classList.add('hidden');
+            countSpan.textContent = `${filteredProducts.length} პროდუქტი`;
+
+            // Calculate pagination
+            const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+            const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
+            const endIndex = startIndex + PRODUCTS_PER_PAGE;
+            const pageProducts = filteredProducts.slice(startIndex, endIndex);
+
+            // Display products
+            pageProducts.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <h3>${escapeHtml(product.title)}</h3>
+                    <div class="product-price">
+                        ${product.price}
+                        <span>₾</span>
+                    </div>
+                    <a href="${product.full_url}" target="_blank" class="buy-btn">
+                        ნახვა მაღაზიაში
+                    </a>
+                `;
+                productsGrid.appendChild(card);
+            });
+
+            // Render pagination
+            renderPagination(totalPages);
+
+            // Update page info
+            pageInfo.textContent = `გვერდი ${currentPage} / ${totalPages}`;
+        }
+
+        // 📄 Render pagination buttons
+        function renderPagination(totalPages) {
+            paginationContainer.innerHTML = '';
+
+            if (totalPages <= 1) {
+                pageInfo.innerHTML = '';
+                return;
+            }
+
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.textContent = '← წინა';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderPage();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            };
+            paginationContainer.appendChild(prevBtn);
+
+            // Page number buttons
+            for (let i = 1; i <= totalPages; i++) {
+                // Show first page, last page, and pages around current page
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.textContent = i;
+                    pageBtn.className = currentPage === i ? 'active' : '';
+                    pageBtn.onclick = () => {
+                        currentPage = i;
+                        renderPage();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    };
+                    paginationContainer.appendChild(pageBtn);
+                } else if (i === 2 || i === totalPages - 1) {
+                    // Show dots for skipped pages
+                    const dots = document.createElement('span');
+                    dots.textContent = '...';
+                    dots.style.color = 'white';
+                    dots.style.padding = '0 5px';
+                    paginationContainer.appendChild(dots);
+                }
+            }
+
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.textContent = 'შემდეგი →';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderPage();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            };
+            paginationContainer.appendChild(nextBtn);
+        }
+
+        // 🔍 Search
+        function handleSearch() {
+            const query = searchInput.value.toLowerCase();
+
+            if (query === '') {
+                filteredProducts = allProducts;
+            } else {
+                filteredProducts = allProducts.filter(product =>
+                    product.title.toLowerCase().includes(query)
+                );
+            }
+
+            currentPage = 1; // Reset to first page when searching
+            renderPage();
+        }
+
+        // HTML escape
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Event listeners
+        searchInput.addEventListener('input', handleSearch);
+
+        // Load products on page load
+        loadProducts();
+    </script>
 </body>
-
 </html>
